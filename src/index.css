@@ -1,0 +1,607 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    background-color: rgb(241, 241, 250);
+}
+
+.side-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 265px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.side-bar-hidden {
+    left: -266px;
+}
+
+.side-bar::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.side-bar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.side-bar::-webkit-scrollbar-thumb {
+    background-color: #848c9c;
+    border-radius: 20px;
+}
+
+.page-title {
+    margin-top: 25px;
+    margin-bottom: 27px;
+    letter-spacing: 1.5px;
+    font-size: 22px;
+}
+
+.side-bar-nav-text {
+    width: 265px;
+    padding-left: 30px;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+
+.dashboard-nav {
+    width: 100%;
+    font-size: 14px;
+}
+
+.nav-dashboard-bar {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.nav-dashboard-bar span {
+    padding-left: 30px;
+    margin-right: 15px;
+}
+
+.nav-dashboard-bar p {
+    margin-top: 5px;
+}
+
+#active-in-nav {
+    color: white;
+}
+
+.rest-of-nav p {
+    margin-top: 20px;
+    margin-left: 70px;
+}
+
+.side-bar-apps-text {
+    width: 100%;
+    padding-left: 30px;
+    margin-top: 20px;
+    font-size: 11px;
+}
+
+.side-bar-apps {
+    width: 100%;
+}
+
+.side-bar-app-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.side-bar-app-bar:hover {
+    color: rgb(187, 187, 194);
+    cursor: pointer;
+}
+
+.side-bar-app-bar span {
+    margin-left: 30px;
+    margin-right: 15px;
+}
+
+.side-bar-app-bar span:hover {
+    cursor: pointer;
+}
+
+.side-bar-app-bar p:hover {
+    cursor: pointer;
+}
+
+.side-bar-app-bar p {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+#last-in-nav {
+    margin-bottom: 20px;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 265px;
+    right: 0;
+    z-index: 20;
+    transition: 0.2s;
+}
+
+.nav-bar-large {
+    left: 0;
+}
+
+#left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu-icon {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.menu-icon:hover {
+    cursor: pointer;
+}
+
+.search-bar {
+    border-radius: 3px;
+    width: fit-content;
+    background-color: rgb(241, 241, 250);
+    vertical-align: middle;
+}
+
+.material-icons.icon-navbar {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 8px;
+    color: dimgrey;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+.search-input {
+    padding-left: 7px;
+    border: none;
+    vertical-align: middle;
+    background-color: rgb(241, 241, 250);
+}
+
+.search-button {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 6px;
+    padding-left: 11px;
+    padding-right: 11px;
+    vertical-align: middle;
+    background-color: rgba(122, 120, 251, 0.952);
+}
+
+.search-button:hover {
+    background-color: rgb(102, 109, 209);
+}
+
+.settings-icon {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: rgb(170, 170, 170);
+}
+
+.settings-icon {
+    vertical-align: middle;
+    margin-right: 20px;
+    color: rgb(170, 170, 170);
+}
+
+#right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.noti-icon {
+    vertical-align: middle;
+    margin-left: 20px;
+    color: rgb(170, 170, 170);
+}
+
+.user-info {
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(170, 170, 170);
+    background-color: rgb(249, 250, 255);
+    margin-right: 20px;
+    padding-right: 15px;
+    border-left: 1px solid rgb(231, 232, 238);
+    border-right: 1px solid rgb(231, 232, 238);
+    cursor: pointer;
+}
+
+.user-icon {
+    height: 32px;
+    margin: 15px;
+}
+
+.main-body {
+    position: absolute;
+    left: 265px;
+    top: 65px;
+    bottom: 0;
+    right: 0;
+    transition: 0.2s;
+}
+
+.main-body-large {
+    left: 0;
+}
+
+.body-heading {
+    font-size: 17px;
+    color: rgb(124, 124, 124);
+    padding-left: 20px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+
+.path-text {
+    padding-left: 5px;
+    padding-right: 20px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    vertical-align: middle;
+    color: rgb(124, 124, 124);
+}
+
+.cards {}
+
+.holder-of-holder {}
+
+.holder-card-widgets {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-widgets {
+    width: 25%;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon {
+    color: rgb(170, 170, 170);
+    margin-bottom: 6px;
+}
+
+.card-name {
+    color: rgb(170, 170, 170);
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.card-numbers {
+    color: rgb(112, 112, 112);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#project-widjet-1 {
+    border-right: 1px solid rgb(211, 211, 211);
+}
+
+#project-widjet-2 {
+    border-right: 1px solid rgb(211, 211, 211);
+}
+
+#project-widjet-3 {
+    border-right: 1px solid rgb(211, 211, 211);
+}
+
+.card-holder {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 293px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+.card-first-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-first-block p {
+    font-size: 17px;
+    color: rgb(112, 112, 112);
+    margin-left: 23px;
+    margin-top: 18px;
+}
+
+.card-first-block span {
+    color: rgb(112, 112, 112);
+    margin-right: 23px;
+    margin-top: 18px;
+}
+
+#completed-tasks {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 23px;
+    color: rgb(129, 129, 129);
+}
+
+#completed-tasks-rest {
+    color: rgb(129, 129, 129);
+}
+
+#completed-tasks-number {
+    color: rgb(112, 112, 112);
+    margin-right: 5px;
+}
+
+.material-icons.s18 {
+    font-size: 18px;
+}
+
+.tasks-edit-icon {
+    color: rgb(112, 112, 112);
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.tasks-delete-icon {
+    color: rgb(112, 112, 112);
+    margin-right: 23px;
+}
+
+.tasks-container {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-card {
+    min-width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    font-size: 14px;
+    height: 60px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+.task-card:hover {
+    background-color: #e6e6e6;
+    cursor: pointer;
+}
+
+.task-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#second-details {
+    margin-top: 5px;
+}
+
+.holder-task-details {
+    position: absolute;
+    left: 0px;
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(124, 124, 124);
+}
+
+.task-heading {
+    margin-left: 23px;
+    color: rgb(112, 112, 112);
+    width: 300px;
+}
+
+.task-status {
+    width: 90px;
+}
+
+.task-status-details {
+    font-size: 13px;
+    border-radius: 5px;
+    color: rgb(255, 179, 0);
+    font-weight: bold;
+    padding-left: 10px;
+    width: 90px;
+    background-color: rgba(255, 196, 35, 0.335);
+}
+
+.task-completed {
+    color: rgb(0, 204, 44);
+    background-color: rgba(41, 251, 104, 0.26);
+}
+
+.task-outdated {
+    padding-left: 12px;
+    color: rgb(255, 29, 29);
+    background-color: rgba(255, 35, 35, 0.267);
+}
+
+.task-assigned {
+    width: 120px;
+}
+
+.task-time {
+    width: 170px;
+}
+
+.task-icons {}
+
+
+/*calender*/
+
+.calender {
+    position: absolute;
+    top: 67px;
+    left: 20px;
+    right: 20px;
+    box-sizing: border-box;
+}
+
+.calender ul {
+    list-style-type: none;
+}
+
+.month {
+    padding-left: 23px;
+    padding-right: 23px;
+    width: 100%;
+    height: 50px;
+    background: #a9afe649;
+    text-align: center;
+    color: #8995ff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    color: rgb(112, 112, 112);
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 0;
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: rgb(121, 121, 121);
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important;
+}
+
+.active-day {
+    font-weight: 700;
+    color: rgb(255, 41, 41);
+}
+
+@media screen and (max-width: 720px) {
+    .weekdays li,
+    .days li {
+        width: 13.1%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li,
+    .days li {
+        width: 12.5%;
+    }
+    .days li .active {
+        padding: 2px;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li,
+    .days li {
+        width: 12.2%;
+    }
+}
+
+
+/* end of calender*/
+
+.calender-holder {
+    position: absolute;
+    top: 770px;
+    left: 20px;
+    right: 20px;
+    height: 357px;
+}
+
+@media only screen and (max-width: 676px) {
+    .search-input {
+        width: 100px;
+        padding-left: 7px;
+        border: none;
+        vertical-align: middle;
+        background-color: rgb(241, 241, 250);
+    }
+}
+
+@media only screen and (max-width: 585px) {
+    #Search-icon {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 563px) {
+    .search-button {
+        display: none;
+    }
+}
+
+
+/*
+@media only screen and (max-width: 1180px) {
+    #side-bar {
+        left: -266px;
+    }
+    #nav-bar {
+        left: 0;
+    }
+    #main-body {
+        left: 0;
+    }
+}*/
